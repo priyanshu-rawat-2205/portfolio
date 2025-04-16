@@ -3,36 +3,37 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter, Send, ExternalLink } from "lucide-react";
+import { Mail, Send, ExternalLink } from "lucide-react";
+import { IconBrandGithub, IconBrandLinkedin, IconBrandX } from '@tabler/icons-react';
 
 const contactMethods = [
   {
     icon: <Mail className="h-6 w-6" />,
     title: "Email",
     description: "Drop me a line at",
-    value: "your.email@example.com",
-    link: "mailto:your.email@example.com",
+    value: "dev.priyanshurawat@gmail.com",
+    link: "mailto:dev.priyanshurawat@gmail.com",
   },
   {
-    icon: <Linkedin className="h-6 w-6" />,
+    icon: <IconBrandLinkedin className="h-6 w-6" />,
     title: "LinkedIn",
     description: "Let's connect on",
-    value: "linkedin.com/in/yourprofile",
-    link: "https://linkedin.com/in/yourprofile",
+    value: "linkedin.com/in/priyanshu-rawat-3251b4271",
+    link: "https://www.linkedin.com/in/priyanshu-rawat-3251b4271/",
   },
   {
-    icon: <Github className="h-6 w-6" />,
+    icon: <IconBrandGithub className="h-6 w-6" />,
     title: "GitHub",
     description: "Check out my work on",
-    value: "github.com/yourusername",
-    link: "https://github.com/yourusername",
+    value: "github.com/priyanshu-rawat-2205",
+    link: "https://github.com/priyanshu-rawat-2205/",
   },
   {
-    icon: <Twitter className="h-6 w-6" />,
-    title: "Twitter",
+    icon: <IconBrandX className="h-6 w-6" />,
+    title: "X (Twitter)",
     description: "Follow me on",
-    value: "@yourusername",
-    link: "https://twitter.com/yourusername",
+    value: "@Mphibian22",
+    link: "https://x.com/Mphibian22",
   },
 ];
 
@@ -162,7 +163,7 @@ export function Contact() {
 
         {/* Additional Info */}
         <div className="text-center text-muted-foreground">
-          <p>Based in Your Location</p>
+          <p>Based in India</p>
           <p>Available for remote work worldwide</p>
         </div>
       </motion.div>

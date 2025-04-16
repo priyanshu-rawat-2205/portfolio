@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Menu, X, Home, User, Briefcase, Code, Mail } from "lucide-react"
+import { Menu, X, Home, User, Code, Mail } from "lucide-react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Sun, Moon } from "lucide-react"
 import { useTheme } from "./theme-provider"
@@ -35,7 +35,7 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
         {open && (
           <div className="flex flex-col items-center space-y-4 mt-6">
             <Avatar className="h-32 w-32">
-              <AvatarImage src="/your-profile-picture.jpg" alt="Your Name" />
+              <AvatarImage src="/your-profile-picture.jpg" alt="Priyanshu Rawat" />
               <AvatarFallback>YN</AvatarFallback>
             </Avatar>
             <div className="text-center">
@@ -75,16 +75,6 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
             <Link to="/projects">
               <Code className="h-5 w-5" />
               {open && <span className="ml-2">Projects</span>}
-            </Link>
-          </Button>
-          <Button
-            variant="ghost"
-            className={`w-full ${open ? 'justify-start' : 'justify-center'} ${location.pathname === '/experience' ? 'bg-accent' : ''}`}
-            asChild
-          >
-            <Link to="/experience">
-              <Briefcase className="h-5 w-5" />
-              {open && <span className="ml-2">Experience</span>}
             </Link>
           </Button>
           <Button

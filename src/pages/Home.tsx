@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 
 export function Home() {
   return (
@@ -18,25 +19,40 @@ export function Home() {
               Priyanshu Rawat
             </h1>
             <h2 className="text-2xl md:text-3xl text-muted-foreground">
-              Full Stack Developer
+              Software Engineer
             </h2>
             <p className="text-lg text-muted-foreground max-w-lg">
-              Passionate about building modern web applications and exploring new technologies.
-              Turning complex problems into elegant solutions.
+            B. Tech. Graduate with proven experience in software technologies. Delivers high-impact projects
+            through software design, collaboration, and technical leadership, improving team efficiency and product
+            quality.
             </p>
             
             <div className="flex gap-4">
-              <Button variant="default">
-                <Mail className="mr-2 h-4 w-4" />
-                Contact Me
+              <Button variant="default" asChild>
+                <a href="mailto:dev.priyanshurawat@gmail.com">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Contact Me
+                </a>
               </Button>
-              <Button variant="outline">
-                <Github className="mr-2 h-4 w-4" />
-                GitHub
+              <Button variant="outline" asChild>
+                <a 
+                  href="https://github.com/priyanshu-rawat-2205/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandGithub className="mr-2 h-4 w-4" />
+                  GitHub
+                </a>
               </Button>
-              <Button variant="outline">
-                <Linkedin className="mr-2 h-4 w-4" />
-                LinkedIn
+              <Button variant="outline" asChild>
+                <a 
+                  href="https://www.linkedin.com/in/priyanshu-rawat-3251b4271/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandLinkedin className="mr-2 h-4 w-4" />
+                  LinkedIn
+                </a>
               </Button>
             </div>
           </div>

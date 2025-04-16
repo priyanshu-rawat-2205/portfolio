@@ -1,22 +1,55 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, GitFork, Eye, ExternalLink, Github } from "lucide-react";
+import { Star, GitFork, Eye, ExternalLink } from "lucide-react";
+import { IconBrandGithub } from '@tabler/icons-react';
 import { motion } from "framer-motion";
 
 // You can add more projects to this array
 const projects = [
   {
-    title: "Project Name",
-    description: "A comprehensive description of your project. Explain what problem it solves and what technologies were used.",
-    githubUrl: "https://github.com/username/project",
-    liveUrl: "https://project-demo.com",
-    stars: 25,
-    forks: 8,
-    watchers: 15,
-    technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
+    title: "Quicasses",
+    description: "A web app to quickly create and take assessment using only the pdf of the question, built using NextJs and Flask.",
+    githubUrl: "https://github.com/priyanshu-rawat-2205/quicasses",
+    liveUrl: "Null",
+    stars: 1,
+    forks: 0,
+    watchers: 1,
+    technologies: ["React", "TypeScript", "Node.js", "MySQL", "Python", "Flask", "Redis", "Docker", "Tailwindcss"],
     topics: ["Web Development", "Full Stack", "Open Source"]
   },
-  // Add more projects...
+  {
+    title: "Automatic Shooting Score Detection System",
+    description: "A QT based application to detect Shooting Scores using only a simple camera module. Built with Python & Opencv",
+    githubUrl: "Null",
+    liveUrl: "Null",
+    stars: 0,
+    forks: 0,
+    watchers: 0,
+    technologies: ["PySide6", "OpenCV", "Python"],
+    topics: ["Computer Vision", "Sports", "QT Framework"]
+  },
+  {
+    title: "Image Encrypter",
+    description: "A Image Encrypter that uses logistic mapping to encrypt image contents, built with Python and QT ",
+    githubUrl: "https://github.com/priyanshu-rawat-2205/logistic_mapping_image_encrypter",
+    liveUrl: "Null",
+    stars: 0,
+    forks: 0,
+    watchers: 1,
+    technologies: ["PySide6", "OpenCV", "Python"],
+    topics: ["Computer Vision", "Image", "Privacy", "QT Framework"]
+  },
+  {
+    title: "PKMS",
+    description: "A Obsidian like Personal Knowledge Management System built with ElctronJS",
+    githubUrl: "https://github.com/priyanshu-rawat-2205/pkms-electron",
+    liveUrl: "Null",
+    stars: 0,
+    forks: 1,
+    watchers: 1,
+    technologies: ["Typscript", "React", "ElectronJS", "Tailwindcss", "NodeJS"],
+    topics: ["Obsidian", "Productivity", "Markdown Editor"]
+  },
 ];
 
 export function Projects() {
@@ -33,7 +66,7 @@ export function Projects() {
             My Projects
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A collection of my open source projects and personal works
+            A collection of my projects and personal works
           </p>
         </div>
 
@@ -51,12 +84,12 @@ export function Projects() {
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
                       <a 
-                        href={project.githubUrl}
+                        href={project.githubUrl === "Null" ? "" : project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-xl font-semibold hover:text-primary flex items-center gap-2 transition-colors"
                       >
-                        <Github className="h-5 w-5" />
+                        <IconBrandGithub className="h-5 w-5" />
                         {project.title}
                       </a>
                       <p className="text-sm text-muted-foreground line-clamp-2">
@@ -101,24 +134,29 @@ export function Projects() {
 
                   {/* Links */}
                   <div className="flex justify-end gap-4 pt-4">
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"
-                    >
-                      <Github className="h-4 w-4" />
-                      Source Code
-                    </a>
+                    {project.liveUrl === "Null" ? (<p className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"></p>) :
+                    ( <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Live Demo
+                      </a>
+                    )}
+                    {project.githubUrl === "Null" ? 
+                    (<p className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors">Currently Private</p>) : 
+                    ( <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors"
+                      >
+                        <IconBrandGithub className="h-4 w-4" />
+                        Source Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </Card>
