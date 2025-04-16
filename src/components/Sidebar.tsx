@@ -4,6 +4,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Sun, Moon } from "lucide-react"
 import { useTheme } from "./theme-provider"
 import { Link, useLocation } from "react-router-dom"
+import pfp from "../assets/pfp.jpg"
 
 interface SidebarProps {
   open: boolean
@@ -35,7 +36,7 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
         {open && (
           <div className="flex flex-col items-center space-y-4 mt-6">
             <Avatar className="h-32 w-32">
-              <AvatarImage src="/your-profile-picture.jpg" alt="Priyanshu Rawat" />
+              <AvatarImage src={pfp} alt="Priyanshu Rawat" />
               <AvatarFallback>YN</AvatarFallback>
             </Avatar>
             <div className="text-center">
@@ -87,13 +88,6 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
               {open && <span className="ml-2">Contact</span>}
             </Link>
           </Button>
-          {/* <Button variant="ghost" className={`w-full ${open ? 'justify-start' : 'justify-center'}`} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-            {theme === "light" ? (
-              <Moon className="h-5 w-5" />
-            ) : (
-              <Sun className="h-5 w-5" />
-            )}
-          </Button> */}
         </nav>
 
         {/* Footer Section with Theme Toggle */}
@@ -127,11 +121,13 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
 
         {/* Social Links - Only show when expanded */}
         {open && (
-          <div className="mt-auto pb-6 flex gap-4 justify-center">
-            {/* Add your social media links here */}
-            <Button variant="ghost" size="icon">
-              {/* Add social media icons */}
-            </Button>
+          <div className="text-xs px-6 text-muted-foreground mb-4">
+            <p>
+              © 2025 Portfolio
+            </p>
+            <p>
+              Created by Priyanshu Rawat
+            </p>
           </div>
         )}
       </div>

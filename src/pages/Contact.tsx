@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Send, ExternalLink } from "lucide-react";
-import { IconBrandGithub, IconBrandLinkedin, IconBrandX } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconBrandX, IconBrandLeetcode } from '@tabler/icons-react';
 
 const contactMethods = [
   {
@@ -34,6 +34,13 @@ const contactMethods = [
     description: "Follow me on",
     value: "@Mphibian22",
     link: "https://x.com/Mphibian22",
+  },
+  {
+    icon: <IconBrandLeetcode className="h-6 w-6" />,
+    title: "Leetcode",
+    description: "Follow me on",
+    value: "@user4303fG",
+    link: "https://leetcode.com/u/user4303fG/",
   },
 ];
 

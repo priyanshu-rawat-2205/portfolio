@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import {Code, Brain, Globe, Rocket, BookOpen, Coffee } from "lucide-react";
+import {Code, Brain, Globe, BookOpen, Coffee, FileBadge } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -29,8 +29,10 @@ export function About() {
                   <Badge variant="secondary">TypeScript</Badge>
                   <Badge variant="secondary">JavaScript</Badge>
                   <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">Java</Badge>
                   <Badge variant="secondary">SQL</Badge>
+                  <Badge variant="secondary">HTML</Badge>
+                  <Badge variant="secondary">C++</Badge>
+                  <Badge variant="secondary">PHP</Badge>
                 </div>
               </Card>
 
@@ -43,7 +45,7 @@ export function About() {
                   <Badge variant="secondary">React</Badge>
                   <Badge variant="secondary">Next.js</Badge>
                   <Badge variant="secondary">Tailwind</Badge>
-                  <Badge variant="secondary">Redux</Badge>
+                  <Badge variant="secondary">Bootstrap</Badge>
                 </div>
               </Card>
 
@@ -55,67 +57,171 @@ export function About() {
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Node.js</Badge>
                   <Badge variant="secondary">Express</Badge>
-                  <Badge variant="secondary">MongoDB</Badge>
-                  <Badge variant="secondary">PostgreSQL</Badge>
+                  <Badge variant="secondary">MySQL/MariaDB</Badge>
+                  <Badge variant="secondary">Flask</Badge>
+                  <Badge variant="secondary">Laravel</Badge>
                 </div>
               </Card>
-            </div>
-          </section>
 
-          {/* Experience */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Experience</h2>
-            <div className="space-y-6">
-              <Card className="p-6">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="text-xl font-semibold">Senior Full Stack Developer</h3>
-                      <p className="text-muted-foreground">Tech Company Name</p>
-                    </div>
-                    <Badge>2021 - Present</Badge>
-                  </div>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Led development of microservices architecture</li>
-                    <li>Improved application performance by 40%</li>
-                    <li>Mentored junior developers</li>
-                  </ul>
-                </div>
-              </Card>
-            </div>
-          </section>
-
-          {/* Projects */}
-          <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Featured Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 space-y-4">
                 <div className="flex items-center gap-2">
-                  <Rocket className="h-5 w-5 text-primary" />
-                  <h3 className="text-xl font-semibold">Project Name</h3>
+                  <Brain className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">DevOps</h3>
                 </div>
-                <p className="text-muted-foreground">Brief project description highlighting key technologies and achievements.</p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">React</Badge>
-                  <Badge variant="outline">Node.js</Badge>
-                  <Badge variant="outline">MongoDB</Badge>
+                  <Badge variant="secondary">Docker</Badge>
+                  <Badge variant="secondary">Linux</Badge>
+                  <Badge variant="secondary">Nginx</Badge>
+                  <Badge variant="secondary">AWS Cloud</Badge>
+                  <Badge variant="secondary">Jenkins</Badge>
+                  <Badge variant="secondary">Networking</Badge>
+                  <Badge variant="secondary">KVM/QEMU</Badge>
                 </div>
               </Card>
             </div>
           </section>
 
-          {/* Education & Certifications */}
+          {/* Education */}
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold">Education & Certifications</h2>
+            <h2 className="text-3xl font-bold">Education</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="p-6 space-y-4">
+              <Card className="p-6">
                 <div className="flex items-center gap-2">
                   <BookOpen className="h-5 w-5 text-primary" />
-                  <h3 className="text-xl font-semibold">Computer Science</h3>
+                  <h3 className="text-xl font-semibold">Bachelor's in Technology (CSE)</h3>
                 </div>
-                <p className="text-muted-foreground">University Name</p>
-                <Badge>2017 - 2021</Badge>
+                <p className="text-muted-foreground">IPS College of Tech. & Mgmt. (7.49 CGPA)</p>
+                <p className="text-muted-foreground">Gwalior (M.P.)</p>
+                <Badge>2021 - 2025</Badge>
               </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">High School (10th)</h3>
+                </div>
+                <p className="text-muted-foreground">Govt. Gorkhee H. S. School, (75%)</p>
+                <p className="text-muted-foreground">Gwalior (M.P.)</p>
+                <Badge>2017 - 2018</Badge>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">Higher Secondary School (12th)</h3>
+                </div>
+                <p className="text-muted-foreground">Govt. Gorkhee H. S. School (75.5%)</p>
+                <p className="text-muted-foreground">Gwalior (M.P.)</p>
+                <Badge>2019 - 2020</Badge>
+              </Card>
+            </div>
+          </section>
+
+          {/* Certifications */}
+          <section className="space-y-6">
+            <h2 className="text-3xl font-bold">Certifications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <FileBadge className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">
+                    <a 
+                      href="https://www.hackerrank.com/certificates/21313a5f93e6" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      Python (Basic)
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">Hackerank</p>
+                <Badge>2024</Badge>
+            </Card>
+
+            <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <FileBadge className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">
+                    <a 
+                      href="https://www.credly.com/badges/cfbaa78c-ef02-47c9-af04-11304b37f2c4/public_url" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      AWS Educate Introduction to Cloud 101
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">Amazon Web Services Training and Certification</p>
+                <Badge>2024</Badge>
+            </Card>
+
+            <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <FileBadge className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">
+                    <a 
+                      href="https://www.credly.com/badges/c8c89d28-4975-4c8a-b265-e5bb29de466d/public_url" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      AWS Educate Getting Started with Storage
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">Amazon Web Services Training and Certification</p>
+                <Badge>2024</Badge>
+            </Card>
+
+            <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <FileBadge className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">
+                    <a 
+                      href="https://www.credly.com/badges/e4f0b05c-531e-46dd-8cc6-ea9e68a8c39c/public_url" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      AWS Educate Getting Started with Compute
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">Amazon Web Services Training and Certification</p>
+                <Badge>2024</Badge>
+            </Card>
+
+            <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <FileBadge className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">
+                    <a 
+                      href="https://www.credly.com/badges/f1f805c0-e407-484e-ae2e-e4fcdfed392c/public_url" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      AWS Educate Getting Started with Networking
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">Amazon Web Services Training and Certification</p>
+                <Badge>2024</Badge>
+            </Card>
+
+            <Card className="p-6">
+                <div className="flex items-center gap-2">
+                  <FileBadge className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">
+                    <a 
+                      href="https://www.credly.com/badges/4946bd3c-b98f-44e8-8cfb-997197410b12/public_url" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      AWS Educate Getting Started with Databases
+                    </a>
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">Amazon Web Services Training and Certification</p>
+                <Badge>2024</Badge>
+            </Card>
             </div>
           </section>
 
@@ -127,9 +233,9 @@ export function About() {
                 <Coffee className="h-4 w-4 mr-2" />
                 Open Source Contributing
               </Badge>
-              <Badge variant="outline" className="text-base py-2 px-4">Tech Blogging</Badge>
-              <Badge variant="outline" className="text-base py-2 px-4">AI/ML</Badge>
-              <Badge variant="outline" className="text-base py-2 px-4">Cloud Computing</Badge>
+              <Badge variant="outline" className="text-base py-2 px-4">Music Production</Badge>
+              <Badge variant="outline" className="text-base py-2 px-4">Creating New Technologies</Badge>
+              <Badge variant="outline" className="text-base py-2 px-4">Writing Fiction Novels</Badge>
             </div>
           </section>
         </motion.div>
