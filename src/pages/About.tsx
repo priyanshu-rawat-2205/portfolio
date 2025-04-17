@@ -17,7 +17,7 @@ export function About() {
           <section className="space-y-6">
             <div className="flex justify-between">
               <h2 className="text-3xl font-bold">Technical Skills</h2>
-              <Button variant="ghost">Download Resume</Button>
+              <Button variant="ghost"><a href="https://github.com/priyanshu-rawat-2205/portfolio/blob/0d81606df6db13c277f8c418c9ec2f3b95215e12/src/assets/priyanshu_resume_2025.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a></Button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="p-6 space-y-4">
